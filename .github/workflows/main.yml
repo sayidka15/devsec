@@ -1,27 +1,25 @@
-name: Test 1
+name: Manual Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   job1:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 - Show message
-        run: echo "Hello from Job 1"
+      - name: Step 1
+        run: echo "Running Job 1"
 
-      - name: Step 2 - Show date
+      - name: Step 2
         run: date
 
   job2:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 - Show system info
-        run: uname -a
+      - name: Step 1
+        run: echo "Running Job 2"
 
-      - name: Step 2 - List files
+      - name: Step 2
         run: ls -la
