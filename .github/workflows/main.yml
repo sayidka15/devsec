@@ -1,0 +1,27 @@
+name: Test 1
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 - Show message
+        run: echo "Hello from Job 1"
+
+      - name: Step 2 - Show date
+        run: date
+
+  job2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 - Show system info
+        run: uname -a
+
+      - name: Step 2 - List files
+        run: ls -la
